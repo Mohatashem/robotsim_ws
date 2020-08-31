@@ -499,6 +499,19 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named robot_control_node
+
+# Build rule for target.
+robot_control_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot_control_node
+.PHONY : robot_control_node
+
+# fast build rule for target.
+robot_control_node/fast:
+	$(MAKE) $(MAKESILENT) -f robot_control/CMakeFiles/robot_control_node.dir/build.make robot_control/CMakeFiles/robot_control_node.dir/build
+.PHONY : robot_control_node/fast
+
+#=============================================================================
 # Target rules for targets named robot_control
 
 # Build rule for target.
@@ -549,6 +562,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... robot_control"
+	@echo "... robot_control_node"
 .PHONY : help
 
 

@@ -211,5 +211,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "robot_control/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake"
   "robot_control/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "robot_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake"
+  "robot_control/CMakeFiles/robot_control_node.dir/DependInfo.cmake"
   "robot_control/CMakeFiles/robot_control.dir/DependInfo.cmake"
   )

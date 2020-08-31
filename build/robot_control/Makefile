@@ -87,6 +87,18 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -141,18 +153,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -412,6 +412,21 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+robot_control/CMakeFiles/robot_control_node.dir/rule:
+	cd /home/agsuser/robotsim_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_node.dir/rule
+.PHONY : robot_control/CMakeFiles/robot_control_node.dir/rule
+
+# Convenience name for target.
+robot_control_node: robot_control/CMakeFiles/robot_control_node.dir/rule
+
+.PHONY : robot_control_node
+
+# fast build rule for target.
+robot_control_node/fast:
+	cd /home/agsuser/robotsim_ws/build && $(MAKE) $(MAKESILENT) -f robot_control/CMakeFiles/robot_control_node.dir/build.make robot_control/CMakeFiles/robot_control_node.dir/build
+.PHONY : robot_control_node/fast
+
+# Convenience name for target.
 robot_control/CMakeFiles/robot_control.dir/rule:
 	cd /home/agsuser/robotsim_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control.dir/rule
 .PHONY : robot_control/CMakeFiles/robot_control.dir/rule
@@ -453,6 +468,33 @@ src/robot_control.cpp.s:
 	cd /home/agsuser/robotsim_ws/build && $(MAKE) $(MAKESILENT) -f robot_control/CMakeFiles/robot_control.dir/build.make robot_control/CMakeFiles/robot_control.dir/src/robot_control.cpp.s
 .PHONY : src/robot_control.cpp.s
 
+src/robot_control_node.o: src/robot_control_node.cpp.o
+
+.PHONY : src/robot_control_node.o
+
+# target to build an object file
+src/robot_control_node.cpp.o:
+	cd /home/agsuser/robotsim_ws/build && $(MAKE) $(MAKESILENT) -f robot_control/CMakeFiles/robot_control_node.dir/build.make robot_control/CMakeFiles/robot_control_node.dir/src/robot_control_node.cpp.o
+.PHONY : src/robot_control_node.cpp.o
+
+src/robot_control_node.i: src/robot_control_node.cpp.i
+
+.PHONY : src/robot_control_node.i
+
+# target to preprocess a source file
+src/robot_control_node.cpp.i:
+	cd /home/agsuser/robotsim_ws/build && $(MAKE) $(MAKESILENT) -f robot_control/CMakeFiles/robot_control_node.dir/build.make robot_control/CMakeFiles/robot_control_node.dir/src/robot_control_node.cpp.i
+.PHONY : src/robot_control_node.cpp.i
+
+src/robot_control_node.s: src/robot_control_node.cpp.s
+
+.PHONY : src/robot_control_node.s
+
+# target to generate assembly for a file
+src/robot_control_node.cpp.s:
+	cd /home/agsuser/robotsim_ws/build && $(MAKE) $(MAKESILENT) -f robot_control/CMakeFiles/robot_control_node.dir/build.make robot_control/CMakeFiles/robot_control_node.dir/src/robot_control_node.cpp.s
+.PHONY : src/robot_control_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -482,9 +524,13 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... robot_control"
+	@echo "... robot_control_node"
 	@echo "... src/robot_control.o"
 	@echo "... src/robot_control.i"
 	@echo "... src/robot_control.s"
+	@echo "... src/robot_control_node.o"
+	@echo "... src/robot_control_node.i"
+	@echo "... src/robot_control_node.s"
 .PHONY : help
 
 

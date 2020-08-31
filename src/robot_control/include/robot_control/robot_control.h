@@ -20,6 +20,12 @@ using namespace Eigen;
 class RobotKinematics
 {   
     private:
+        ros::NodeHandle n;
+        /**
+         * List all publishers and subscribers here;
+         * declare variables here.
+         * 
+         **/
         double d1;
         double d2;
         double d3;

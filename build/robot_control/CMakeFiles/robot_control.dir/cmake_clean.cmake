@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/agsuser/robotsim_ws/devel/lib/robot_control/robot_control"
-  "/home/agsuser/robotsim_ws/devel/lib/robot_control/robot_control.pdb"
+  "/home/agsuser/robotsim_ws/devel/lib/librobot_control.pdb"
+  "/home/agsuser/robotsim_ws/devel/lib/librobot_control.so"
   "CMakeFiles/robot_control.dir/src/robot_control.cpp.o"
 )
 

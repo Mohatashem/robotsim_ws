@@ -2,6 +2,13 @@
 #include "ros/ros.h"
 #include <iostream>
 
+/**
+ * here we will initialize the variables  
+ * and declare call back functions
+ * 
+ **/
+
+
 
 int main (int argc, char const *argv[])
 {
@@ -11,5 +18,4 @@ int main (int argc, char const *argv[])
     cout<< "x_msr = " << x_msr << endl;
     cout << "idiot vscode" << endl; 
     return 0;
-
 }

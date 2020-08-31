@@ -8,4 +8,3 @@
 
 # modified environment variables
 export PWD="/home/agsuser/robotsim_ws/build"
-export ROS_PACKAGE_PATH="/home/agsuser/robotsim_ws/src:/home/agsuser/catkin_ws/src:/opt/ros/kinetic/share"
