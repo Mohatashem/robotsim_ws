@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/agsuser/robotsim_ws/devel/lib/librobot_control.pdb"
-  "/home/agsuser/robotsim_ws/devel/lib/librobot_control.so"
   "CMakeFiles/robot_control.dir/src/robot_control.cpp.o"
+  "/home/mrm/robotsim_ws/devel/lib/librobot_control.pdb"
+  "/home/mrm/robotsim_ws/devel/lib/librobot_control.so"
 )
 
 # Per-language clean rules from dependency scanning.
