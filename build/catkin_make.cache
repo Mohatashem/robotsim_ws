@@ -1,2 +1,2 @@
 robot_control
--DCATKIN_DEVEL_PREFIX=/home/mrm/robotsim_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mrm/robotsim_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/agsuser/robotsim_ws/devel -DCMAKE_INSTALL_PREFIX=/home/agsuser/robotsim_ws/install -G Unix Makefiles

@@ -14,34 +14,38 @@
 #include "eigen3/Eigen/Core"
 #include "eigen3/Eigen/SVD"
 
-using namespace std;
-using namespace Eigen;
+using std::cout;
+using std::endl;
+using namespace Eigen; // ask lentin
 
 class RobotKinematics
 {   
     private:
-        int mess;
-        ros::NodeHandle n;
+        int mess_;
+        ros::NodeHandle n_;
         // The following publish to the topics added in the Coppelia sim node using the ROSInterface helper customization script
-        ros::Publisher start_pub;  
-        ros::Publisher sync_pub;
-        ros::Publisher trigger_pub;
-        ros::Publisher pause_pub;
+        ros::Publisher start_pub_;  
+        ros::Publisher sync_pub_;
+        ros::Publisher trigger_pub_;
+        ros::Publisher pause_pub_;
         // The following nodes are to interact with the robot model
-        ros::Publisher joint_torque_pub;
-        ros::Subscriber joint_sub;
+        ros::Publisher joint_torque_pub_;
+        ros::Subscriber joint_sub_;
       
         // declaring joint parameters and pi (fixed stuff)
-        double d1;
-        double d2;
-        double d3;
-        double pi;    
+        double d1_;
+        double d2_;
+        double d3_;
+        double pi_;    
     public:
-        void getjoint_cb (const sensor_msgs::JointState &currentjoint); // to be defined in robot_control.cpp library
-        double c1,s1,c2,s2,c3,s3,c4,s4,c5,s5,c6,s6,c7,s7;
-        double th1,th2,th3,th4,th5,th6,th7;
-         RobotKinematics();
-        ArrayXd calculateFKM();
+        void getjoint_cb (const sensor_msgs::JointState &currentjointstate); // to be defined in robot_control.cpp library
+        Array<double,7,1> q_msr_; // getting the joint variables from the robot
+        ArrayXd x_msr_;
+        double c1_,s1_,c2_,s2_,c3_,s3_,c4_,s4_,c5_,s5_,c6_,s6_,c7_,s7_;
+      //  double th1_,th2_,th3_,th4_,th5_,th6_,th7_;
+        RobotKinematics();
+        ArrayXd calculateFKM(Array<double,7,1> q_msr_);
+        ArrayXd errorCalculator();
             
 };
 #endif
