@@ -6,9 +6,9 @@
 
 RobotKinematics::RobotKinematics():
     mess_(1),
-    d1_(0.15), 
-    d2_(0.15), 
-    d3_(0.15), 
+    d1_(0.4), 
+    d2_(0.39), 
+    d3_(0.2), 
     pi_(3.1415926535898)
     //th1_(0.57)
 {    
@@ -17,9 +17,9 @@ RobotKinematics::RobotKinematics():
     trigger_pub_ = n_.advertise<std_msgs::Bool>("triggerNextStep", mess_);
     pause_pub_ = n_.advertise<std_msgs::Bool>("pauseSimulation",mess_);
 
-    joint_torque_pub_ = n_.advertise<sensor_msgs::JointState>("setjointforce", mess_);
-    joint_sub_ = n_.subscribe("getJointState",mess_,&RobotKinematics::getjoint_cb,this);
- 
+    joint_torque_pub_ = n_.advertise<sensor_msgs::JointState>("set_jointforce", mess_);
+    joint_sub_ = n_.subscribe("get_jointState",mess_,&RobotKinematics::getjointCallback,this);
+    orientation_sub_ = n_.subscribe("get_orientation",mess_,&RobotKinematics::orientationCallback,this);
 }
 ArrayXd RobotKinematics::calculateFKM(Array<double,7,1> q_msr_)
 {
@@ -88,18 +88,20 @@ ArrayXd RobotKinematics::calculateFKM(Array<double,7,1> q_msr_)
         T07 *= T07;
     }  // exiting the for loop we have total transformation from base to EE.
     cout <<T07<<endl;
-   // x_msr_ = (T07.col(3)).head(3);
+    x_msr_ = (T07.col(3)).head(3);
+
+    
     //return x_msr_;
 };
 
 
-void RobotKinematics::getjoint_cb(const sensor_msgs::JointState &currentjointstate)
+void RobotKinematics::getjointCallback(const sensor_msgs::JointState &currentjointstate)
 {
-    for(int i=0;i<7;i++)
-    {
-        q_msr_(i,0) = currentjointstate.position[i];
+  for(int i=0;i<7;i++)
+  {
+    q_msr_(i,0) = currentjointstate.position[i];
        
-    }
+  }
    // ArrayXd x;
     //x = calculateFKM(q_msr_);
     
@@ -128,3 +130,13 @@ void RobotKinematics::getjoint_cb(const sensor_msgs::JointState &currentjointsta
 */
     
 };
+
+void RobotKinematics::orientationCallback(const std_msgs::Float32MultiArray &getorientation)
+{
+  for(int i=0;i<3;i++)
+	    {
+		 	 angle_(i,0) = getorientation.data[i];
+	    }
+
+
+}

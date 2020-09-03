@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/agsuser/robotsim_ws/devel:$CMAKE_PREFIX_PATH"
-export PWD="/home/agsuser/robotsim_ws/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/agsuser/robotsim_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/agsuser/robotsim_ws/src:/home/agsuser/catkin_ws/src:/opt/ros/kinetic/share"
+export LD_LIBRARY_PATH="/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu"
+export PKG_CONFIG_PATH="/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig"
+export PWD="/home/mrm/robotsim_ws/build"
+export ROS_PACKAGE_PATH="/home/mrm/robotsim_ws/src:/opt/ros/kinetic/share"

@@ -31,6 +31,7 @@ class RobotKinematics
         // The following nodes are to interact with the robot model
         ros::Publisher joint_torque_pub_;
         ros::Subscriber joint_sub_;
+        ros::Subscriber orientation_sub_;
       
         // declaring joint parameters and pi (fixed stuff)
         double d1_;
@@ -38,14 +39,13 @@ class RobotKinematics
         double d3_;
         double pi_;    
     public:
-        void getjoint_cb (const sensor_msgs::JointState &currentjointstate); // to be defined in robot_control.cpp library
+        void getjointCallback (const sensor_msgs::JointState &currentjointstate); // to be defined in robot_control.cpp library
+        void orientationCallback(const std_msgs::Float32MultiArray &getorientation);
         Array<double,7,1> q_msr_; // getting the joint variables from the robot
-        ArrayXd x_msr_;
+        Array<double,3,1>  x_msr_; Array<double,3,1>  x_cmd_; Array<double,3,1>  angle_;
         double c1_,s1_,c2_,s2_,c3_,s3_,c4_,s4_,c5_,s5_,c6_,s6_,c7_,s7_;
-      //  double th1_,th2_,th3_,th4_,th5_,th6_,th7_;
         RobotKinematics();
         ArrayXd calculateFKM(Array<double,7,1> q_msr_);
-        ArrayXd errorCalculator();
             
 };
 #endif
