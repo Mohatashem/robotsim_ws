@@ -35,8 +35,6 @@ eigen3/Eigen/SVD
 /home/mrm/robotsim_ws/src/robot_control/src/robot_control.cpp
 robot_control/robot_control.h
 /home/mrm/robotsim_ws/src/robot_control/src/robot_control/robot_control.h
-ros/ros.h
-/home/mrm/robotsim_ws/src/robot_control/src/ros/ros.h
 iostream
 -
 
