@@ -11,10 +11,10 @@ RobotKinematics::RobotKinematics():
     pi_(3.1415926535898)
     //th1_(0.57)
 {    
-    start_pub_ = n_.advertise<std_msgs::Bool>("startSimulation", mess_);
-    sync_pub_ = n_.advertise<std_msgs::Bool>("enableSyncMode", mess_);
-    trigger_pub_ = n_.advertise<std_msgs::Bool>("triggerNextStep", mess_);
-    pause_pub_ = n_.advertise<std_msgs::Bool>("pauseSimulation",mess_);
+   // start_pub_ = n_.advertise<std_msgs::Bool>("startSimulation", mess_);
+   // sync_pub_ = n_.advertise<std_msgs::Bool>("enableSyncMode", mess_);
+   // trigger_pub_ = n_.advertise<std_msgs::Bool>("triggerNextStep", mess_);
+  //  pause_pub_ = n_.advertise<std_msgs::Bool>("pauseSimulation",mess_);
 
     joint_torque_pub_ = n_.advertise<sensor_msgs::JointState>("set_jointforce", mess_);
     joint_sub_ = n_.subscribe("get_jointState",mess_,&RobotKinematics::getjointCallback,this);
