@@ -12,8 +12,8 @@ int main (int argc, char **argv)
     ControllerClass torquecontrollers;
 
     while (ros::ok()){
-      cout <<"node is running"<< endl;
-      cout << torquecontrollers.x_msr_ << endl;
+      //cout <<"node is running"<< endl;
+      //cout << torquecontrollers.x_msr_ << endl;
 
 
       ros::spinOnce();

@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,65 +6,65 @@
 
 #IncludeRegexTransform: 
 
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/controller_class.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/controller_class.h
 ros/ros.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/ros/ros.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/ros/ros.h
 std_msgs/String.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/std_msgs/String.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/std_msgs/String.h
 std_msgs/UInt8.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/std_msgs/UInt8.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/std_msgs/UInt8.h
 std_msgs/Float32MultiArray.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Float32MultiArray.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Float32MultiArray.h
 std_msgs/Float32.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Float32.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Float32.h
 std_msgs/Bool.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Bool.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Bool.h
 vector
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/vector
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/vector
 sensor_msgs/JointState.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/sensor_msgs/JointState.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/sensor_msgs/JointState.h
 std_msgs/Float32MultiArray.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Float32MultiArray.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Float32MultiArray.h
 eigen3/Eigen/Dense
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/eigen3/Eigen/Dense
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/eigen3/Eigen/Dense
 eigen3/Eigen/Core
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/eigen3/Eigen/Core
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/eigen3/Eigen/Core
 eigen3/Eigen/SVD
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/eigen3/Eigen/SVD
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/eigen3/Eigen/SVD
 
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/robot_control.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/robot_control.h
 ros/ros.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/ros/ros.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/ros/ros.h
 std_msgs/String.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/std_msgs/String.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/std_msgs/String.h
 std_msgs/UInt8.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/std_msgs/UInt8.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/std_msgs/UInt8.h
 std_msgs/Float32MultiArray.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Float32MultiArray.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Float32MultiArray.h
 std_msgs/Float32.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Float32.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Float32.h
 std_msgs/Bool.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Bool.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Bool.h
 vector
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/vector
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/vector
 sensor_msgs/JointState.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/sensor_msgs/JointState.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/sensor_msgs/JointState.h
 std_msgs/Float32MultiArray.h
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Float32MultiArray.h
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/std_msgs/Float32MultiArray.h
 eigen3/Eigen/Dense
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/eigen3/Eigen/Dense
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/eigen3/Eigen/Dense
 eigen3/Eigen/Core
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/eigen3/Eigen/Core
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/eigen3/Eigen/Core
 eigen3/Eigen/SVD
-/home/agsuser/robotsim_ws/src/robot_control/include/robot_control/eigen3/Eigen/SVD
+/home/mrm/robotsim_ws/src/robot_control/include/robot_control/eigen3/Eigen/SVD
 
-/home/agsuser/robotsim_ws/src/robot_control/src/controller_implementation_node.cpp
+/home/mrm/robotsim_ws/src/robot_control/src/controller_implementation_node.cpp
 robot_control/robot_control.h
-/home/agsuser/robotsim_ws/src/robot_control/src/robot_control/robot_control.h
+/home/mrm/robotsim_ws/src/robot_control/src/robot_control/robot_control.h
 robot_control/controller_class.h
-/home/agsuser/robotsim_ws/src/robot_control/src/robot_control/controller_class.h
+/home/mrm/robotsim_ws/src/robot_control/src/robot_control/controller_class.h
 std_msgs/String.h
-/home/agsuser/robotsim_ws/src/robot_control/src/std_msgs/String.h
+/home/mrm/robotsim_ws/src/robot_control/src/std_msgs/String.h
 
 /opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h

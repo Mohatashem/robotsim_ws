@@ -4,7 +4,7 @@
 
 ControllerClass::ControllerClass():
 
-    mess_(1),KPx_(100), KPy_(100), KPz_(100), KPa_(0.10), KPb_(0.10), KPc_(0.10),
+    mess_(10),KPx_(100), KPy_(100), KPz_(100), KPa_(0.10), KPb_(0.10), KPc_(0.10),
 	KDx_(0.01), KDy_(0.01), KDz_(0.01), KDa_(0.001), KDb_(0.001), KDc_(0.001)
 
 {
@@ -30,6 +30,7 @@ void ControllerClass::getforwardkinematicsCallback(const std_msgs::Float32MultiA
         cartesianvel_error_ = x_dot_cmd_ - x_dot_msr_;
         force_impedance = cartesianImpedancecontroller(cartesianpos_error_,cartesianvel_error_);
         Matrix<double,6,1> force_total = force_impedance;
+        cout << "force total" <<force_total << endl;
         for (int i = 0; i < 6; i++)
 			  {
 				  
