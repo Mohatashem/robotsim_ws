@@ -1,4 +1,4 @@
-prefix=/home/mrm/robotsim_ws/install
+prefix=/home/agsuser/robotsim_ws/install
 
 Name: robot_control
 Description: Description of robot_control

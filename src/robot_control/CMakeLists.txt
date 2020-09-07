@@ -23,8 +23,8 @@ include_directories(
 
 
 ## Declare a C++ library
-add_library(${PROJECT_NAME} src/${PROJECT_NAME}.cpp)
-add_executable(${PROJECT_NAME}_node src/${PROJECT_NAME}_node.cpp)
- target_link_libraries(${PROJECT_NAME}_node ${PROJECT_NAME} ${catkin_LIBRARIES})
+add_library(controller_implementation src/controller_implementation.cpp)
+add_executable(controller_implementation_node src/controller_implementation_node.cpp)
+ target_link_libraries(controller_implementation_node controller_implementation ${catkin_LIBRARIES})
 
 
