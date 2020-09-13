@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "robot_control")
 set(robot_control_VERSION "0.0.0")
-set(robot_control_MAINTAINER "mrm <mrm@todo.todo>")
+set(robot_control_MAINTAINER "Mohatashem Reyaz Makhdoomi <makhdoomimohtashim@gmail.com>")
 set(robot_control_PACKAGE_FORMAT "2")
 set(robot_control_BUILD_DEPENDS "roscpp")
 set(robot_control_BUILD_EXPORT_DEPENDS "roscpp")

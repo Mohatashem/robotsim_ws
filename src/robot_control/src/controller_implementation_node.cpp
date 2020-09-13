@@ -1,4 +1,3 @@
-#include "robot_control/robot_control.h"
 #include "robot_control/controller_class.h"
 
 # include "std_msgs/String.h"
@@ -8,16 +7,14 @@
 int main (int argc, char **argv)
 {
     ros::init(argc, argv, "controller_implementation_node");
-
     ControllerClass torquecontrollers;
+    ros::Rate loop_rate(200); // 5ms
 
     while (ros::ok()){
-      //cout <<"node is running"<< endl;
-      //cout << torquecontrollers.x_msr_ << endl;
-
-
+      cout << "Jacobian is" << endl;
+      std::cout << torquecontrollers.analytical_jacobian_ << endl;
       ros::spinOnce();
-
+      loop_rate.sleep();
     }
     
 

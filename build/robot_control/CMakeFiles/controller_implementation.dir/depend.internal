@@ -3,7 +3,6 @@
 
 robot_control/CMakeFiles/controller_implementation.dir/src/controller_implementation.cpp.o
  /home/mrm/robotsim_ws/src/robot_control/include/robot_control/controller_class.h
- /home/mrm/robotsim_ws/src/robot_control/include/robot_control/robot_control.h
  /home/mrm/robotsim_ws/src/robot_control/src/controller_implementation.cpp
  /opt/ros/kinetic/include/ros/advertise_options.h
  /opt/ros/kinetic/include/ros/advertise_service_options.h
@@ -69,6 +68,5 @@ robot_control/CMakeFiles/controller_implementation.dir/src/controller_implementa
  /opt/ros/kinetic/include/std_msgs/MultiArrayDimension.h
  /opt/ros/kinetic/include/std_msgs/MultiArrayLayout.h
  /opt/ros/kinetic/include/std_msgs/String.h
- /opt/ros/kinetic/include/std_msgs/UInt8.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
